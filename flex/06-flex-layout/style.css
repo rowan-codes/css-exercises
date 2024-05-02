@@ -5,6 +5,10 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  /* arrange footer to go to bottom of viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -16,6 +20,10 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /* add padding and margins */
+  padding: 8px; 
+  gap: 8px;
+  margin-top: 15px;
 }
 
 input {
@@ -23,4 +31,39 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+/* remove link underlining */
+a {
+text-decoration: none;
+color: grey;
+}
+
+/* remove bullets from list */
+ul {
+  list-style-type: none;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* header and footer spacing and style */
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+.left-links, .right-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* center main content */
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
