@@ -2,28 +2,80 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  /* this is the parent so needs to be a flex container */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* pin to top and bottom of the page */
+.header, .footer {
+  padding-left: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  /* my styling below */
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* align the text to center of the header height */
+.text {
+  align-self: center;
 }
 
 .footer {
   height: 72px;
   background: #eee;
-  color: darkmagenta;
+  color: darkmagenta;  
+  justify-content: center;
+}
+
+/* added new flex container around the content to position sidebar vs cards */
+.content {
+  display: flex;
+  /* the below causes the content to stretch height to fill the container space */
+  flex: 1;
 }
 
 .sidebar {
-  width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  /* set card size */
+  width: 300px;
+  height: 250px;
+  padding: 15px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #eee;
+  font-size: 24px;
 }
