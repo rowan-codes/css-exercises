@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 html, body {
   height: 100%;
 }
@@ -9,7 +8,6 @@ body {
   margin: 0;
   background: #aaa;
   color: #333;
-  /* I'll give you this one for free lol */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,6 +18,9 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  /* put the ! icon on left and everything else on right */
+  display: flex;
+  padding: 8px;
 }
 
 .icon {
@@ -33,6 +34,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* stop shrink of icon */
+  flex-shrink: 0;
 }
 
 .close-button {
@@ -66,4 +69,19 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+/* adding additional div to control positions */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+/* adding additional div to control positions */
+.header {
+  display: flex;  /* need to change display mode of every div */
+  font-size: large;  /* making header font bigger */
+  justify-content: space-between;
 }
